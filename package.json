@@ -1,0 +1,8 @@
+{
+  "name": "pokieticker-local",
+  "private": true,
+  "scripts": {
+    "dev": "./scripts/dev.sh",
+    "start": "./scripts/dev.sh"
+  }
+}

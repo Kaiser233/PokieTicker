@@ -77,7 +77,24 @@ The repo includes a pre-built database (`pokieticker.db`) with historical data, 
 ```bash
 git clone https://github.com/owengetinfo-design/PokieTicker.git
 cd PokieTicker
+npm run dev
+```
 
+That single command will:
+
+- unpack the bundled database and ML models if needed
+- create `venv/` if missing
+- install backend and frontend dependencies if missing
+- start the backend on `127.0.0.1:8000`
+- start the frontend on `127.0.0.1:7777`
+
+Open **http://127.0.0.1:7777/PokieTicker/** and press `Ctrl+C` once to stop both services.
+
+### Manual setup
+
+If you prefer to run the backend and frontend separately:
+
+```bash
 # Unpack the pre-built database and models
 gunzip -k pokieticker.db.gz
 tar xzf models.tar.gz -C backend/ml/
@@ -91,7 +108,7 @@ pip install -r requirements.txt
 cd frontend && npm install && cd ..
 ```
 
-Then start both services (in two terminal windows):
+Then start both services in two terminal windows:
 
 ```bash
 # Terminal 1: Backend
